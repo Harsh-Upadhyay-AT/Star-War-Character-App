@@ -1,0 +1,34 @@
+
+
+.header {
+    background-color: #2265ad;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .navbar {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .navbar li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar li a:hover {
+    color: #007BFF;
+  }
+  
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+  
