@@ -1,0 +1,51 @@
+Vehicle.css
+
+/* Style for the container div */
+.container {
+  padding: 20px;
+}
+
+/* Style for the vehicle list */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Style for the vehicle image */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the vehicle name */
+h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Style for the links */
+Link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Style for the pagination container */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}

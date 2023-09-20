@@ -6,7 +6,7 @@ const Layout = () => {
     return (
       <>
         <div className="header">
-          <h1>{Strings.starWarCharacter}</h1>
+          <h1>{Strings.starWar}</h1>
         </div>
         <div className="navbar">
           <li>

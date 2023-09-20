@@ -3,12 +3,13 @@ import { useParams } from "react-router-dom";
 import { IRootState, useAppDispatch } from "../../../redux/store";
 import { getIndividualFilmActions } from "../../../redux/FilmSlice/FilmAsyncThunk";
 import { useEffect } from "react";
+import { Strings } from "../../../resource/Strings";
+import moment from "moment";
 
 const FilmDetails = () => {
   const { specificFilm } = useSelector(
     (state: IRootState) => state.filmStateData
   );
-
   const { filmId } = useParams();
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -18,16 +19,16 @@ const FilmDetails = () => {
 
   return (
     <>
-      <div>
-        <div>{specificFilm.title}</div>
-        <div>{specificFilm.episode_id}</div>
-        <div>{specificFilm.opening_crawl}</div>
-        <div>{specificFilm.characters}</div>
-        <div>{specificFilm.created}</div>
-        <div>{specificFilm.director}</div>
-        <div>{specificFilm.producer}</div>
-        <div>{specificFilm.release_date}</div>
-        <div>{specificFilm.edited}</div>
+    <div></div>
+      <div style={{ padding: "20px", border: "1px solid #ccc" }}>
+        <div style={{ marginBottom: "10px" }}>{Strings.title}: {specificFilm.title}</div>
+        <div style={{ marginBottom: "10px" }}>{Strings.episode}: {specificFilm.episode_id}</div>
+        <div style={{ marginBottom: "10px" }}>{Strings.openingCrawl}: {specificFilm.opening_crawl}</div>
+        <div style={{ marginBottom: '10px' }}>{Strings.created}: {moment(specificFilm.created)?.format("YYYY-MM-DD HH:mm:ss")}</div>
+        <div style={{ marginBottom: "10px" }}>{Strings.director}: {specificFilm.director}</div>
+        <div style={{ marginBottom: "10px" }}>{Strings.producer}: {specificFilm.producer}</div>
+        <div style={{ marginBottom: "10px" }}>{Strings.releaseDate}: {specificFilm.release_date}</div>
+        <div style={{ marginBottom: "10px" }}>{Strings.edited}: {moment(specificFilm.edited)?.format("YYYY-MM-DD HH:mm:ss")}</div>
       </div>
     </>
   );

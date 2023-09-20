@@ -1,0 +1,35 @@
+/* StarShips.css */
+
+.starship-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .starship-list ul {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+  }
+  
+  .starship-list ul img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .starship-link a {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  .starship-link a:hover {
+    color: red;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+  }
