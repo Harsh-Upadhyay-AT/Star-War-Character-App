@@ -1,35 +1,50 @@
-/* StarShips.css */
+.starship-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+  }
 
-.starship-list {
-    display: flex;
-    flex-wrap: wrap;
+  .starship-card {
+    background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
-  .starship-list ul {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    max-width: 300px;
-  }
-  
-  .starship-list ul img {
-    max-width: 100%;
+
+  .starship-card img {
+    width: 100%;
     height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
-  
-  .starship-link a {
-    text-decoration: none;
-    color: blue;
+
+  .detail-item {
+    margin-bottom: 10px;
   }
-  
-  .starship-link a:hover {
-    color: red;
+  .detail-item label {
+    font-weight: bold;
   }
-  
-  .pagination {
-    margin-top: 20px;
+
+  .starship-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
   }
-  
-  .pagination button {
-    margin: 0 5px;
+
+  .starship-card button:hover {
+    background-color: #0056b3;
+  }
+
+  .starship-card li {
+    margin-bottom: 10px;
+  }
+  .starship-card .title-text {
+    font-weight: bold;
   }

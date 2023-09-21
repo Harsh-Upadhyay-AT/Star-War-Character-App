@@ -14,6 +14,7 @@ export interface Species {
     url: string;
     created: string;
     edited: string;
+
   }
   export interface SpeciesList {
     list: Species[]

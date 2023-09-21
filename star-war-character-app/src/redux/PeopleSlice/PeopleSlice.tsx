@@ -15,6 +15,8 @@ const initialSpecificPerson = {
     birth_year: "",
     gender: "",
     homeworld: "",
+    created: "",
+    edited: "",
     films: [],
     species: []
 }

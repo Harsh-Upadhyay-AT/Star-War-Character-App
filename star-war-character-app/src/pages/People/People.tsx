@@ -13,16 +13,17 @@ import "./People.css";
 import { Strings } from "../../resource/Strings";
 
 const People = () => {
+  const dispatch = useAppDispatch();
   const { list, page, total, limit } = useSelector(
     (state: IRootState) => state.peopleStateData
   );
   const imageList = useSelector(
     (state: IRootState) => state.imageStateData.list
   );
+  const totalPage = setTotalPageCount(total, limit);
   const isLoading = useSelector(
     (state: IRootState) => state.peopleStateData.isLoading
   );
-  const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(
       getPeopleActions({
@@ -38,13 +39,13 @@ const People = () => {
     );
   }, [dispatch, limit, page]);
 
-  const totalPage = setTotalPageCount(total, limit);
+  
   const pageChangeHandler = (currentPage: number) => {
     const page = Number(currentPage);
     dispatch(peopleAction.setCurrentPage(page));
-    list.forEach((film, index) => {
-      dispatch(getImageActions({ id: index }));
-    });
+    // list.forEach((film, index) => {
+    //   dispatch(getImageActions({ id: index }));
+    // });
     dispatch(
       getPeopleActions({
         page,
@@ -53,6 +54,7 @@ const People = () => {
     );
   };
 return (
+  <div>
     <Fragment>
     {isLoading && list.length === 0 ? (
         <Loader />
@@ -69,28 +71,16 @@ return (
                     <label>{Strings.name}:</label> {person?.name}
                 </div>
             <div className="detail-item">
-                <label>{Strings.height}:</label> {person.height}
-            </div>
-            <div className="detail-item">
-                <label>{Strings.skinColor}:</label> {person.skin_color}
-            </div>
-            <div className="detail-item">
-                <label>{Strings.hairColor}:</label> {person.hair_color}
-            </div>
-            <div className="detail-item">
-                <label>{Strings.eyeColor}:</label> {person.eye_color}
-            </div>
-            <div className="detail-item">
                 <label>{Strings.birthYear}:</label> {person.birth_year}
             </div>
             <div className="detail-item">
                 <label>{Strings.gender}:</label> {person.gender}
             </div>
-                <button>
                     <Link to={`/people/${splitId?.[1]?.replace("/", "")}`}>
+                <button>
                         {Strings.view}
-                    </Link>
                 </button>
+                    </Link>
                 </div>
             );
             })}
@@ -109,6 +99,7 @@ return (
         </>
     )}
     </Fragment>
+    </div>
     );
 };
 export default People;

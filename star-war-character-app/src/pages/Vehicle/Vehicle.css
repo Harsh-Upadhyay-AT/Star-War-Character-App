@@ -1,51 +1,54 @@
-Vehicle.css
-
-/* Style for the container div */
-.container {
-  padding: 20px;
+.vehicle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
 }
 
-/* Style for the vehicle list */
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.vehicle-card {
+  background-color: #f9f9f9;
   border: 1px solid #ccc;
-  margin-bottom: 20px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the vehicle image */
-img {
-  max-width: 100%;
+.vehicle-card img {
+  width: 100%;
   height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-/* Style for the vehicle name */
-h4 {
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 5px;
+.detail-item {
+  margin-bottom: 10px;
 }
 
-/* Style for the links */
-Link {
-  text-decoration: none;
-  color: #007bff;
+.detail-item label {
+  font-weight: bold;
 }
 
-/* Style for the pagination container */
-.pagination {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.vehicle-card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Style for the loader */
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+.vehicle-card button:hover {
+  background-color: #0056b3;
 }
+
+.vehicle-card li {
+  margin-bottom: 10px;
+}
+
+.vehicle-card .title-text {
+  font-weight: bold;
+}
+
+

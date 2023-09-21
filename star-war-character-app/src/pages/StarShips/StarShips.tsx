@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Pagination from "../../Components/Pagination/Pagination";
 import './StarShips.css';
 import { Strings } from "../../resource/Strings";
-import moment from "moment";
+
 
 const StarShips = () => {
   const dispatch = useAppDispatch();
@@ -54,41 +54,28 @@ const StarShips = () => {
 
 return (
     <div>
-  <Fragment>
-    {isLoading && list.length === 0 ? (<Loader />) : (
+      <Fragment>
+      {isLoading && list.length === 0 ? (<Loader />) : (
       <>
-        <div className="starship-list">
+        <div className="starship-container">
           {list.map((starShips, id) => {
             const image = imageList[id];
             const splitId = starShips?.url?.split("/starships/");
             return (
-              <ul key={id}>
-                <div>
+              <div key={id} className="starship-card">
                   <img src={image?.download_url} alt={image?.author} />
-                </div>
-                <div className="starship-link">
-                    {starShips.name}
-                </div>
-                <p>{starShips.model}</p>
-                <p>{starShips.starship_class}</p>
-                <p>{starShips.manufacturer}</p>
-                <p>{starShips.cost_in_credits}</p>
-                <p>{starShips.length}</p>
-                <p>{starShips.crew}</p>
-                <p>{starShips.passengers}</p>
-                <p>{starShips.max_atmosphering_speed}</p>
-                <p>{starShips.hyperdrive_rating}</p>
-                <p>{starShips.MGLT}</p>
-                <p>{starShips.cargo_capacity}</p>
-                <p>{starShips.consumables}</p>
-                <p>{moment(starShips.created)?.format("DD-MM-YYYY")}</p>
-                <p>{moment(starShips.edited)?.format("DD-MM-YYYY")}</p>
+                <li style={{ marginBottom: '10px'}}>
+                <span className="title-text">{Strings.name} :</span> {starShips.name}
+                </li>
+                <li style={{ marginBottom: '10px'}}>
+                <span className="title-text">{Strings.model} :</span> {starShips.model}
+                </li>
                 <Link to={`/starship/${splitId?.[1]?.replace("/", "")}`}>
                 <button>
                   {Strings.view}
                 </button>
                 </Link>
-              </ul>
+              </div>
             );
           })}
         </div>

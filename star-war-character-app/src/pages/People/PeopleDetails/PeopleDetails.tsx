@@ -2,17 +2,15 @@ import { useSelector } from "react-redux";
 import { IRootState, useAppDispatch } from "../../../redux/store";
 import { Fragment, useEffect } from "react";
 import { getIndividualPeopleActions } from "../../../redux/PeopleSlice/PeopleAsyncThunk";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { peopleAction } from "../../../redux/PeopleSlice/PeopleSlice";
 import { Loader } from "../../../Loader/Loader";
 import { Strings } from "../../../resource/Strings";
 import "./PeopleDetails.css";
+import moment from "moment";
 
 const PeopleDetails = () => {
   const dispatch = useAppDispatch();
-  const { list } = useSelector(
-    (state: IRootState) => state.peopleStateData
-  );
   const isLoading = useSelector(
     (state: IRootState) => state.peopleStateData.isLoading
   );
@@ -30,39 +28,55 @@ const PeopleDetails = () => {
     }
   }, [dispatch, peopleId]);
   return (
+    <div>
     <Fragment>
-      {isLoading && list.length === 0 ? (
-        <div className="loader-container">
-          <Loader />
-        </div>
-      ) : (
+      {isLoading ? <Loader/> :
         <>
           <div className="people-details-container">
-            <div className="detail-item">
-              <label>{Strings.name}:</label> {specificPerson?.name}
-            </div>
-            <div className="detail-item">
-              <label>{Strings.age}:</label> {specificPerson?.birth_year}
-            </div>
-            <div className="detail-item">
-              <label>{Strings.eyeColor}:</label> {specificPerson?.eye_color}
-            </div>
-            <div className="detail-item">
-              <label>{Strings.hairColor}:</label> {specificPerson?.hair_color}
-            </div>
-            <div className="detail-item">
-              <label>{Strings.gender}:</label> {specificPerson?.gender}
-            </div>
-            <div className="detail-item">
-              <label>{Strings.height}:</label> {specificPerson?.height}
-            </div>
-            <div className="detail-item">
-              <label>{Strings.mass}:</label> {specificPerson?.mass}
-            </div>
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.name}:</span> {specificPerson?.name}
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.dateOfBirth}:</span> {specificPerson?.birth_year}
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.eyeColor}:</span> {specificPerson?.eye_color}
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.hairColor}:</span> {specificPerson?.hair_color}
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+                <span className="title-text">{Strings.skinColor}:</span> {specificPerson?.skin_color}
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.gender}:</span> {specificPerson?.gender}
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.height}:</span> {specificPerson?.height}
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.mass}:</span> {specificPerson?.mass}
+            </li>
+
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.edited}:</span> {moment(specificPerson?.edited)?.format("YYYY-MM-DD HH:mm:ss")}
+            </li>
+
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.created}:</span> {moment(specificPerson?.created)?.format("YYYY-MM-DD HH:mm:ss")}
+            </li>
+
+            <li style={{ marginBottom: "10px" }}>
+              <span className="title-text">{Strings.mass}:</span> {specificPerson?.mass}
+            </li>
           </div>
+          <Link to="/people">
+                <button id="backButton">{Strings.back}</button>
+            </Link>
         </>
-      )}
+      }
     </Fragment>
+    </div>
   );
 };
 export default PeopleDetails;

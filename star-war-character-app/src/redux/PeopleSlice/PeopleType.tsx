@@ -12,6 +12,8 @@ export interface Peoples {
     homeworld: string;
     films: string[];
     species: string[];
+    created: string;
+    edited: string;
   }
   export interface PeoplesList {
     list: Peoples[];

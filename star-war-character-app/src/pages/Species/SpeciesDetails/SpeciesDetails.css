@@ -1,16 +1,15 @@
-.filmDetailsContainer {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 20px;
-  }
-  
-  .film-details-item  {
+.speciesDetailsContainer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+}
+  .species-details-item {
     margin-bottom: 10px;
     font-size: 18px;
-  } 
-
+  }
+  
   #backButton {
     margin-top: 10px;
     background-color: #007bff;
@@ -24,3 +23,4 @@
   #backButton:hover {
     background-color: #0056b3;
   }
+  
