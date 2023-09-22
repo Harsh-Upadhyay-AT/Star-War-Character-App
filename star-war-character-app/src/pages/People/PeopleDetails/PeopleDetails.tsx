@@ -66,9 +66,6 @@ const PeopleDetails = () => {
               <span className="title-text">{Strings.created}:</span> {moment(specificPerson?.created)?.format("YYYY-MM-DD HH:mm:ss")}
             </li>
 
-            <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.mass}:</span> {specificPerson?.mass}
-            </li>
           </div>
           <Link to="/people">
                 <button id="backButton">{Strings.back}</button>
