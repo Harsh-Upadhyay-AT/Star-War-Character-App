@@ -70,7 +70,7 @@ return (
                 <li style={{ marginBottom: '10px'}}>
                 <span className="title-text">{Strings.model} :</span> {starShips.model}
                 </li>
-                <Link to={`/starship/${splitId?.[1]?.replace("/", "")}`}>
+                <Link to={`/starship/${splitId?.[1]?.replace("/", "")}`} title={Strings.view}>
                 <button>
                   {Strings.view}
                 </button>

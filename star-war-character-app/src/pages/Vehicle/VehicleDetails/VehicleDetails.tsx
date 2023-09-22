@@ -89,7 +89,7 @@ const VehicleDetails = () => {
               {moment(specificVehicle.edited)?.format("YYYY-MM-DD HH:mm:ss")}
             </div>
           </div>
-          <Link to="/vehicle">
+          <Link to="/vehicle" title={Strings.back}>
             <button id="backButton">{Strings.back}</button>
           </Link>
         </>

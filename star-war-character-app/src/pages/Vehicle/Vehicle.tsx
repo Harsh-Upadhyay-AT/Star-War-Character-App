@@ -71,7 +71,7 @@ const Vehicle = () => {
                       <span className="title-text">{Strings.model}:</span>{" "}
                       {vehicle.model}
                     </li>
-                    <Link to={`/vehicle/${splitId?.[1]?.replace("/", "")}`}>
+                    <Link to={`/vehicle/${splitId?.[1]?.replace("/", "")}`} title={Strings.view}>
                       <button>{Strings.view}</button>
                     </Link>
                   </div>

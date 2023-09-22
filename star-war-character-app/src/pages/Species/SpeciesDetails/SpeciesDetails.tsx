@@ -88,7 +88,7 @@ const SpeciesDetails = () => {
               {moment(specificSpecies.edited)?.format("YYYY-MM-DD HH:mm:ss")}
             </li>
           </div>
-          <Link to="/species">
+          <Link to="/species" title={Strings.back}>
                 <button id="backButton">{Strings.back}</button>
             </Link>
         </>

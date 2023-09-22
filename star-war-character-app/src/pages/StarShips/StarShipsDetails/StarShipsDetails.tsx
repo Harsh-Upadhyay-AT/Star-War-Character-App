@@ -90,7 +90,7 @@ const StarShipsDetails = () => {
           <span className="title-text">{Strings.edited}: </span> {moment(specificStarship.edited)?.format("DD-MM-YYYY")}
       </li>
     </div>
-    <Link to="/starship">
+            <Link to="/starship" title={Strings.back}>
                 <button id="backButton">{Strings.back}</button>
             </Link>
     </>}

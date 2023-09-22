@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Strings } from "../../resource/Strings";
 
 interface PaginationProps {
   page: number;
@@ -44,12 +45,12 @@ const Pagination:FC<PaginationProps> = ({
     <div className="pagination" style={{ textAlign: "center", marginBottom: "10px" }}>
       <span>{`Page ${page} of ${totalPages}:`}</span>
       <>
-        <button onClick={handlePreviousPage} disabled={page === 1}>
-          prev
+        <button onClick={handlePreviousPage} disabled={page === 1} title={Strings.previous}>
+          {Strings.prev}
         </button>
         {renderPageButtons()}
-        <button onClick={handleNextPage} disabled={page === totalPages}>
-          next
+        <button onClick={handleNextPage} disabled={page === totalPages} title={Strings.next}>
+        {Strings.next}
         </button>
       </>
     </div>

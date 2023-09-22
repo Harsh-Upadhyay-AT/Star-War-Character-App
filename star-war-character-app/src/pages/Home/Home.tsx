@@ -10,7 +10,7 @@ const Home = () => {
           {Strings.films}
           <div>
             <button>
-              <Link to="/films">view</Link>
+              <Link to="/films" title={Strings.viewFilms}>{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -21,7 +21,7 @@ const Home = () => {
           {Strings.starShips}
           <div>
             <button>
-              <Link to="/starship">view</Link>
+              <Link to="/starship" title={Strings.viewStarship}>{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -32,7 +32,7 @@ const Home = () => {
           {Strings.people}
           <div>
             <button>
-              <Link to="/people">view</Link>
+              <Link to="/people" title={Strings.viewPeople}>{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -43,7 +43,7 @@ const Home = () => {
           {Strings.vehicles}
           <div>
             <button>
-              <Link to="/vehicle">view</Link>
+              <Link to="/vehicle" title={Strings.viewVehicle}>{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -54,7 +54,7 @@ const Home = () => {
           {Strings.species}
           <div>
             <button>
-              <Link to="/species">view</Link>
+              <Link to="/species" title={Strings.viewSpecies}>{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -65,7 +65,7 @@ const Home = () => {
           {Strings.planets}
           <div>
             <button>
-              <Link to="/planets">view</Link>
+              <Link to="/planets" title={Strings.viewPlanets}>{Strings.view}</Link>
             </button>
           </div>
         </li>

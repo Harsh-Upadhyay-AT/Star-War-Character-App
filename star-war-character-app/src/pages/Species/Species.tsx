@@ -66,6 +66,7 @@ const Species = () => {
                       style={{ height: "200px" }}
                       src={image?.download_url}
                       alt={image?.author}
+                      title={Strings.image}
                     />
                     <li style={{ marginBottom: "10px" }}>
                       <span className="title-text">{Strings.name}:</span>{" "}
@@ -77,7 +78,7 @@ const Species = () => {
                       </span>{" "}
                       {species.classification}
                     </li>
-                    <Link to={`/species/${splitId?.[1]?.replace("/", "")}`}>
+                    <Link to={`/species/${splitId?.[1]?.replace("/", "")}`} title={Strings.view}>
                       <button>{Strings.view}</button>
                     </Link>
                   </div>

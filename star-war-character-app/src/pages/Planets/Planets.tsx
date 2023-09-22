@@ -66,6 +66,7 @@ const Planets = () => {
                         style={{ height: "200px" }}
                         src={image?.download_url}
                         alt={image?.author}
+                        title={Strings.image}
                     />
                     <li style={{ marginBottom: "10px" }}>
                         <span className="title-text">{Strings.name}:</span>{" "}
@@ -83,7 +84,7 @@ const Planets = () => {
                         <span className="title-text">{Strings.population}:</span>{" "}
                         {planet.population}
                     </li>
-                    <Link to={`/planet/${splitId?.[1]?.replace("/", "")}`}>
+                    <Link to={`/planet/${splitId?.[1]?.replace("/", "")}`} title={Strings.view}>
                         <button>{Strings.view}</button>
                     </Link>
                   </div>

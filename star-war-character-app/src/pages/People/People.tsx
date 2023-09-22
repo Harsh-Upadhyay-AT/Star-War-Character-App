@@ -63,7 +63,7 @@ return (
             const splitId = person?.url?.split("/people/");
             return (
                 <div className="person-card" key={id}>
-                    <img src={image?.download_url} alt={image?.author} />
+                    <img src={image?.download_url} alt={image?.author} title={Strings.image}/>
                 <div className="detail-item">
                     <label>{Strings.name}:</label> {person?.name}
                 </div>
@@ -73,7 +73,7 @@ return (
             <div className="detail-item">
                 <label>{Strings.gender}:</label> {person.gender}
             </div>
-                    <Link to={`/people/${splitId?.[1]?.replace("/", "")}`}>
+                    <Link to={`/people/${splitId?.[1]?.replace("/", "")}`} title={Strings.view}>
                 <button>
                         {Strings.view}
                 </button>

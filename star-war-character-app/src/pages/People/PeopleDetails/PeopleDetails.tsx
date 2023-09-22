@@ -67,7 +67,7 @@ const PeopleDetails = () => {
             </li>
 
           </div>
-          <Link to="/people">
+          <Link to="/people" title={Strings.back}>
                 <button id="backButton">{Strings.back}</button>
             </Link>
         </>

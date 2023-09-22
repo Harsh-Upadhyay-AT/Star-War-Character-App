@@ -80,7 +80,7 @@ const PlanetDetails = () => {
               {moment(specificPlanet.edited)?.format("YYYY-MM-DD HH:mm:ss")}
             </li>
           </div>
-            <Link to="/planets">
+            <Link to="/planets" title={Strings.back}>
                 <button id="backButton">{Strings.back}</button>
             </Link>
         </>

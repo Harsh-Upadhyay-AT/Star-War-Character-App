@@ -53,20 +53,20 @@ const Films = () => {
                 const splitId = films?.url?.split("/films/");
                 return (
                   <div key={id} className="filmStyle-card">
-                    <img src={image?.download_url} alt={image?.author} />
-                    <li style={{ marginBottom: "10px" }}>
+                    <img src={image?.download_url} alt={image?.author} title={Strings.image} />
+                    <li style={{ marginBottom: "10px" }} >
                       <span className="title-text">{Strings.title}:</span>{" "}
                       {films.title}
                     </li>
-                    <li style={{ marginBottom: "10px" }}>
+                    <li style={{ marginBottom: "10px" }} >
                       <span className="title-text">{Strings.episode}:</span>{" "}
                       {films.episode_id}
                     </li>
-                    <li style={{ marginBottom: "10px" }}>
+                    <li style={{ marginBottom: "10px" }} >
                       <span className="title-text">{Strings.releaseDate}:</span>{" "}
                       {moment(films.release_date)?.format("DD-MM-YYYY")}
                     </li>
-                    <Link
+                    <Link title={Strings.view}
                       to={`/films/${splitId?.[1]?.replace("/", "")}`}
                     >
                       <button>{Strings.view}</button>

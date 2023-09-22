@@ -68,7 +68,7 @@ const FilmDetails = () => {
             </li>
           </div>
 
-          <Link to="/films">
+          <Link to="/films" title={Strings.back}>
             <button id="backButton">{Strings.back}</button>
           </Link>
         </>
