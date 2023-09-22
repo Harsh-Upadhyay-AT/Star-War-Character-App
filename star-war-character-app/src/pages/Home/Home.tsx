@@ -9,8 +9,8 @@ const Home = () => {
         <li>
           {Strings.films}
           <div>
-            <button>
-              <Link to="/films" title={Strings.viewFilms}>{Strings.view}</Link>
+            <button title={Strings.viewFilms}>
+              <Link to="/films" >{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -20,8 +20,8 @@ const Home = () => {
         <li>
           {Strings.starShips}
           <div>
-            <button>
-              <Link to="/starship" title={Strings.viewStarship}>{Strings.view}</Link>
+            <button title={Strings.viewStarship}>
+              <Link to="/starship" >{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -31,8 +31,8 @@ const Home = () => {
         <li>
           {Strings.people}
           <div>
-            <button>
-              <Link to="/people" title={Strings.viewPeople}>{Strings.view}</Link>
+            <button title={Strings.viewPeople}>
+              <Link to="/people" >{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -42,8 +42,8 @@ const Home = () => {
         <li>
           {Strings.vehicles}
           <div>
-            <button>
-              <Link to="/vehicle" title={Strings.viewVehicle}>{Strings.view}</Link>
+            <button title={Strings.viewVehicle}>
+              <Link to="/vehicle" >{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -53,8 +53,8 @@ const Home = () => {
         <li>
           {Strings.species}
           <div>
-            <button>
-              <Link to="/species" title={Strings.viewSpecies}>{Strings.view}</Link>
+            <button title={Strings.viewSpecies}>
+              <Link to="/species" >{Strings.view}</Link>
             </button>
           </div>
         </li>
@@ -64,8 +64,8 @@ const Home = () => {
         <li>
           {Strings.planets}
           <div>
-            <button>
-              <Link to="/planets" title={Strings.viewPlanets}>{Strings.view}</Link>
+            <button title={Strings.viewPlanets}>
+              <Link to="/planets" >{Strings.view}</Link>
             </button>
           </div>
         </li>
