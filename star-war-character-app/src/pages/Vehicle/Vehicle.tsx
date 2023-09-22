@@ -61,19 +61,16 @@ const Vehicle = () => {
                 const splitId = vehicle?.url?.split("/vehicles/");
                 return (
                   <div key={id} className="vehicle-card">
-                      <img 
-                      src={image?.download_url} 
-                      alt={image?.author} 
-                      />
-                      <li style={{ marginBottom: "10px" }}>
+                    <img src={image?.download_url} alt={image?.author} />
+                    <li style={{ marginBottom: "10px" }}>
                       <span className="title-text">{Strings.name}:</span>{" "}
                       {vehicle.name}
-                      </li>
+                    </li>
 
-                      <li style={{ marginBottom: "10px" }}>
+                    <li style={{ marginBottom: "10px" }}>
                       <span className="title-text">{Strings.model}:</span>{" "}
                       {vehicle.model}
-                      </li>
+                    </li>
                     <Link to={`/vehicle/${splitId?.[1]?.replace("/", "")}`}>
                       <button>{Strings.view}</button>
                     </Link>
