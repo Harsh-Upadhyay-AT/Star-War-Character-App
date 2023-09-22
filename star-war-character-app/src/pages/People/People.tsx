@@ -43,9 +43,6 @@ const People = () => {
   const pageChangeHandler = (currentPage: number) => {
     const page = Number(currentPage);
     dispatch(peopleAction.setCurrentPage(page));
-    // list.forEach((film, index) => {
-    //   dispatch(getImageActions({ id: index }));
-    // });
     dispatch(
       getPeopleActions({
         page,
