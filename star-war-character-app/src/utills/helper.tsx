@@ -7,3 +7,6 @@ export const convertToIndianDateFormat = (date: string | Date) => {
 export const convertToYYYYMMDDwithTimeFormat = (date: Date) => {
   return moment(date)?.format("YYYY-MM-DD HH:mm:ss");
 };
+
+
+export const toUrl = (pathname: string) => process.env.PUBLIC_URL + pathname

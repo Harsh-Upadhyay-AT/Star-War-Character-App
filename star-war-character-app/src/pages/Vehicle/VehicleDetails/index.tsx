@@ -49,12 +49,12 @@ const VehicleDetails = () => {
 
             <div className="detail-item">
               <label>{Strings.cargoCapacity}:</label>
-              {specificVehicle.cargo_capacity}
+              {specificVehicle.cargo_capacity}  {Strings.kilograms}
             </div>
 
             <div className="detail-item">
               <label>{Strings.costInCredits}:</label>
-              {specificVehicle.cost_in_credits}
+              {Strings.rupee} {specificVehicle.cost_in_credits}
             </div>
 
             <div className="detail-item">
@@ -63,11 +63,11 @@ const VehicleDetails = () => {
             </div>
 
             <div className="detail-item">
-              <label>{Strings.length}:</label> {specificVehicle.length}
+              <label>{Strings.length}:</label> {specificVehicle.length} {Strings.ft}
             </div>
 
             <div className="detail-item">
-              <label>{Strings.crew}:</label> {specificVehicle.crew}
+              <label>{Strings.crew}:</label> {specificVehicle.crew} {Strings.unit}
             </div>
 
             <div className="detail-item">
@@ -76,7 +76,7 @@ const VehicleDetails = () => {
 
             <div className="detail-item">
               <label>{Strings.maxAtmosphereSpeed}:</label>
-              {specificVehicle.max_atmosphering_speed}
+              {specificVehicle.max_atmosphering_speed}  {Strings.km}
             </div>
 
             <div className="detail-item">

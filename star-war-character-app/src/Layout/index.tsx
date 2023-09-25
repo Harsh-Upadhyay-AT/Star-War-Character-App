@@ -1,19 +1,23 @@
 import { Link, Outlet } from "react-router-dom";
 import "./index.css";
 import { Strings } from "resource/Strings";
+import { useLocation } from 'react-router-dom'
 
 const Layout = () => {
+  const {pathname} = useLocation()
+
     return (
       <>
         <div className="header">
-          <h1 title={Strings.starWar}>{Strings.starWar}</h1>
+          <h1 title={Strings.starWar}>{Strings.starWar}: {pathname}</h1>
         </div>
         <div className="navbar">
           <li title={Strings.home}>
-            <Link to="/">{Strings.home}</Link>
+            <Link to="/home">{Strings.home}</Link>
           </li>
           <li title={Strings.films}>
-            <Link to="/films">{Strings.films}</Link>
+            <Link to="/films">
+              {Strings.films}</Link>
           </li>
           <li title={Strings.starShips}>
             <Link to="/starship">{Strings.starShips}</Link>
