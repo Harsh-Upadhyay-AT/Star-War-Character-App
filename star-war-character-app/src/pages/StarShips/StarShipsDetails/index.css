@@ -1,0 +1,12 @@
+.starship-details-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+  }
+
+  .starship-details-item {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }

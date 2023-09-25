@@ -1,0 +1,52 @@
+.species-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+  .species-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+  .species-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .detail-item {
+    margin-bottom: 10px;
+  }
+
+  .detail-item label {
+    font-weight: bold;
+  }
+
+  .species-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+  .species-card button:hover {
+    background-color: #0056b3;
+  }
+
+  .species-card li {
+    margin-bottom: 10px;
+  }
+
+  .species-card .title-text {
+    font-weight: bold;
+  }
