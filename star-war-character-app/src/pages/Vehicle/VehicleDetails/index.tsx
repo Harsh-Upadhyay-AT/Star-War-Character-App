@@ -1,12 +1,12 @@
 import { Link, useParams } from "react-router-dom";
-import { IRootState, useAppDispatch } from "../../../redux/store";
 import { useSelector } from "react-redux";
 import { Fragment, useEffect } from "react";
-import { getIndividualVehicleActions } from "../../../redux/VehicleSlice/VehicleAsyncThunk";
-import { Strings } from "../../../resource/Strings";
-import { Loader } from "../../../Loader/Loader";
 import moment from "moment";
-import "./VehicleDetails.css"
+import "./index.css"
+import { getIndividualVehicleActions } from "redux/VehicleSlice/VehicleAsyncThunk";
+import { Strings } from "resource/Strings";
+import { Loader } from "Loader";
+import { IRootState, useAppDispatch } from "redux/store";
 
 
 const VehicleDetails = () => {
@@ -43,17 +43,17 @@ const VehicleDetails = () => {
             </div>
 
             <div className="detail-item">
-              <label>{Strings.consumables}:</label>{" "}
+              <label>{Strings.consumables}:</label>
               {specificVehicle.consumables}
             </div>
 
             <div className="detail-item">
-              <label>{Strings.cargoCapacity}:</label>{" "}
+              <label>{Strings.cargoCapacity}:</label>
               {specificVehicle.cargo_capacity}
             </div>
 
             <div className="detail-item">
-              <label>{Strings.costInCredits}:</label>{" "}
+              <label>{Strings.costInCredits}:</label>
               {specificVehicle.cost_in_credits}
             </div>
 
@@ -80,12 +80,12 @@ const VehicleDetails = () => {
             </div>
 
             <div className="detail-item">
-              <label>{Strings.created}:</label>{" "}
+              <label>{Strings.created}:</label>
               {moment(specificVehicle.created)?.format("YYYY-MM-DD HH:mm:ss")}
             </div>
 
             <div className="detail-item">
-              <label>{Strings.edited}:</label>{" "}
+              <label>{Strings.edited}:</label>
               {moment(specificVehicle.edited)?.format("YYYY-MM-DD HH:mm:ss")}
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Strings } from "../../resource/Strings";
-import "./Home.css";
+import "./index.css";
+import { Strings } from "resource/Strings";
 
 const Home = () => {
   return (

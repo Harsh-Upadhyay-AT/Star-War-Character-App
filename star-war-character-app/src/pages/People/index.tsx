@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
-import { IRootState, useAppDispatch } from "../../redux/store";
 import { Fragment, useEffect } from "react";
-import { getPeopleActions } from "../../redux/PeopleSlice/PeopleAsyncThunk";
-import constant from "../../config/constant";
-import { setTotalPageCount } from "../../service/ApiHelper";
 import { Link } from "react-router-dom";
-import { getImageActions } from "../../redux/ImageSlice/ImageAsyncThunk";
-import { peopleAction } from "../../redux/PeopleSlice/PeopleSlice";
-import { Loader } from "../../Loader/Loader";
-import Pagination from "../../Components/Pagination/Pagination";
-import "./People.css";
-import { Strings } from "../../resource/Strings";
+import "./index.css";
+import { IRootState, useAppDispatch } from "redux/store";
+import { setTotalPageCount } from "service/ApiHelper";
+import { getPeopleActions } from "redux/PeopleSlice/PeopleAsyncThunk";
+import constant from "config/constant";
+import { getImageActions } from "redux/ImageSlice/ImageAsyncThunk";
+import { peopleAction } from "redux/PeopleSlice/PeopleSlice";
+import { Loader } from "Loader";
+import { Strings } from "resource/Strings";
+import Pagination from "Components/Pagination";
 
 const People = () => {
   const dispatch = useAppDispatch();

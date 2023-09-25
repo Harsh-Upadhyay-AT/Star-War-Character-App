@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
-import { IRootState, useAppDispatch } from "../../../redux/store";
 import { Fragment, useEffect } from "react";
-import { getIndividualPeopleActions } from "../../../redux/PeopleSlice/PeopleAsyncThunk";
 import { Link, useParams } from "react-router-dom";
-import { peopleAction } from "../../../redux/PeopleSlice/PeopleSlice";
-import { Loader } from "../../../Loader/Loader";
-import { Strings } from "../../../resource/Strings";
-import "./PeopleDetails.css";
+import "./index.css";
 import moment from "moment";
+import { IRootState, useAppDispatch } from "redux/store";
+import { getIndividualPeopleActions } from "redux/PeopleSlice/PeopleAsyncThunk";
+import { peopleAction } from "redux/PeopleSlice/PeopleSlice";
+import { Loader } from "Loader";
+import { Strings } from "resource/Strings";
 
 const PeopleDetails = () => {
   const dispatch = useAppDispatch();

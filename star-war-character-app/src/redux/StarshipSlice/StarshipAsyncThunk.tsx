@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getIndividualStarship, getStarship } from "../../service/StarshipService";
-import constant from "../../config/constant";
+import constant from "config/constant";
+import { getIndividualStarship, getStarship } from "service/StarshipService";
+
 
 export interface GetStarshipList {
   id?: number;
@@ -17,10 +18,10 @@ export const getStarshipActions = createAsyncThunk(
     try {
       const response = await getStarship(payload);
       if (response.status === constant.APIResponse.defaultStatusCode) {
-        return{ 
-        data: response?.data?.results,
-        count: response?.data?.count
-      }
+        return {
+          data: response?.data?.results,
+          count: response?.data?.count,
+        };
       } else if (response.status === constant.APIResponse.errorStatusCode) {
         return response?.data?.message;
       }
@@ -35,9 +36,9 @@ export const getIndividualStarshipActions = createAsyncThunk(
     try {
       const response = await getIndividualStarship(payload);
       if (response.status === constant.APIResponse.defaultStatusCode) {
-        return{ 
-        data: response?.data
-      }
+        return {
+          data: response?.data,
+        };
       } else if (response.status === constant.APIResponse.errorStatusCode) {
         return response?.data?.message;
       }

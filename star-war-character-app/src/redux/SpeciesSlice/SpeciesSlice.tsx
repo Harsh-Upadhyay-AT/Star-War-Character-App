@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getIndividualSpeciesActions, getSpeciesActions } from "./SpeciesAsyncThunk";
-import constant from "../../config/constant";
 import { SpeciesList } from "./SpeciesType";
+import constant from "config/constant";
 
 const initialSpecificSpecies ={
   name: "",

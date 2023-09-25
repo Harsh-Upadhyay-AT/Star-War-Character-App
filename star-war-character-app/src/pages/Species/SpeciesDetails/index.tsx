@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
-import { IRootState, useAppDispatch } from "../../../redux/store";
 import { Fragment, useEffect } from "react";
-import { getIndividualSpeciesActions } from "../../../redux/SpeciesSlice/SpeciesAsyncThunk";
 import { Link, useParams } from "react-router-dom";
-import { speciesAction } from "../../../redux/SpeciesSlice/SpeciesSlice";
-import { Strings } from "../../../resource/Strings";
 import moment from "moment";
-import { Loader } from "../../../Loader/Loader";
-import "./SpeciesDetails.css"
+import "./index.css"
+import { IRootState, useAppDispatch } from "redux/store";
+import { getIndividualSpeciesActions } from "redux/SpeciesSlice/SpeciesAsyncThunk";
+import { speciesAction } from "redux/SpeciesSlice/SpeciesSlice";
+import { Loader } from "Loader";
+import { Strings } from "resource/Strings";
 
 const SpeciesDetails = () => {
   const { specificSpecies } = useSelector(
@@ -34,57 +34,57 @@ const SpeciesDetails = () => {
         <>
           <div className="speciesDetailsContainer">
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.name}:</span>{" "}
+              <span className="title-text">{Strings.name}:</span>
               {specificSpecies.name}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.classification}:</span>{" "}
+              <span className="title-text">{Strings.classification}:</span>
               {specificSpecies.classification}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.designation}:</span>{" "}
+              <span className="title-text">{Strings.designation}:</span>
               {specificSpecies.designation}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.averageHeight}:</span>{" "}
+              <span className="title-text">{Strings.averageHeight}:</span>
               {specificSpecies.average_height}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.averageLifespan}:</span>{" "}
+              <span className="title-text">{Strings.averageLifespan}:</span>
               {specificSpecies.average_lifespan}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.eyeColor}:</span>{" "}
+              <span className="title-text">{Strings.eyeColor}:</span>
               {specificSpecies.eye_colors}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.hairColor}:</span>{" "}
+              <span className="title-text">{Strings.hairColor}:</span>
               {specificSpecies.hair_colors}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.skinColor}:</span>{" "}
+              <span className="title-text">{Strings.skinColor}:</span>
               {specificSpecies.skin_colors}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.language}:</span>{" "}
+              <span className="title-text">{Strings.language}:</span>
               {specificSpecies.language}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.created}:</span>{" "}
+              <span className="title-text">{Strings.created}:</span>
               {moment(specificSpecies.created)?.format("YYYY-MM-DD HH:mm:ss")}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.edited}:</span>{" "}
+              <span className="title-text">{Strings.edited}:</span>
               {moment(specificSpecies.edited)?.format("YYYY-MM-DD HH:mm:ss")}
             </li>
           </div>

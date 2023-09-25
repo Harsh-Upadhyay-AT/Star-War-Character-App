@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
-import { IRootState, useAppDispatch } from "../../redux/store";
-import { setTotalPageCount } from "../../service/ApiHelper";
 import { Fragment, useEffect } from "react";
-import { getStarshipActions } from "../../redux/StarshipSlice/StarshipAsyncThunk";
 import constant from "../../config/constant";
-import { getImageActions } from "../../redux/ImageSlice/ImageAsyncThunk";
-import { starshipAction } from "../../redux/StarshipSlice/StarshipSlice";
-import { Loader } from "../../Loader/Loader";
 import { Link } from "react-router-dom";
-import Pagination from "../../Components/Pagination/Pagination";
-import './StarShips.css';
-import { Strings } from "../../resource/Strings";
+import './index.css';
+import { Strings } from "resource/Strings";
+import { IRootState, useAppDispatch } from "redux/store";
+import { setTotalPageCount } from "service/ApiHelper";
+import { getStarshipActions } from "redux/StarshipSlice/StarshipAsyncThunk";
+import { getImageActions } from "redux/ImageSlice/ImageAsyncThunk";
+import { starshipAction } from "redux/StarshipSlice/StarshipSlice";
+import { Loader } from "Loader";
+import Pagination from "Components/Pagination";
 
 
 const StarShips = () => {

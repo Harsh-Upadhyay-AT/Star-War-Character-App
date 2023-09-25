@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import constant from "../../config/constant";
-import { getIndividualSpecies, getSpecies } from "../../service/SpeciesService";
+import constant from "config/constant";
+import { getIndividualSpecies, getSpecies } from "service/SpeciesService";
+
 
 export interface GetSpeciesList {
   id?: number;

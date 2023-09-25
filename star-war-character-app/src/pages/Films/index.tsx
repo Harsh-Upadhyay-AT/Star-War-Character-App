@@ -1,17 +1,17 @@
 import { useSelector } from "react-redux";
-import { IRootState, useAppDispatch } from "../../redux/store";
 import { Fragment, useEffect } from "react";
-import { getFilmActions } from "../../redux/FilmSlice/FilmAsyncThunk";
-import { getImageActions } from "../../redux/ImageSlice/ImageAsyncThunk";
-import constant from "../../config/constant";
-import { Loader } from "../../Loader/Loader";
-import { filmAction } from "../../redux/FilmSlice/FilmSlice";
-import { setTotalPageCount } from "../../service/ApiHelper";
 import { Link } from "react-router-dom";
-import Pagination from "../../Components/Pagination/Pagination";
-import "./Films.css";
-import { Strings } from "../../resource/Strings";
+import "./index.css";
 import moment from "moment";
+import { IRootState, useAppDispatch } from "redux/store";
+import { getFilmActions } from "redux/FilmSlice/FilmAsyncThunk";
+import { getImageActions } from "redux/ImageSlice/ImageAsyncThunk";
+import constant from "config/constant";
+import { setTotalPageCount } from "service/ApiHelper";
+import { filmAction } from "redux/FilmSlice/FilmSlice";
+import { Loader } from "Loader";
+import { Strings } from "resource/Strings";
+import Pagination from "Components/Pagination";
 
 const Films = () => {
   const { list, page, total, limit } = useSelector(
@@ -55,15 +55,15 @@ const Films = () => {
                   <div key={id} className="filmStyle-card">
                     <img src={image?.download_url} alt={image?.author} title={Strings.image} />
                     <li style={{ marginBottom: "10px" }} >
-                      <span className="title-text">{Strings.title}:</span>{" "}
+                      <span className="title-text">{Strings.title}:</span>
                       {films.title}
                     </li>
                     <li style={{ marginBottom: "10px" }} >
-                      <span className="title-text">{Strings.episode}:</span>{" "}
+                      <span className="title-text">{Strings.episode}:</span>
                       {films.episode_id}
                     </li>
                     <li style={{ marginBottom: "10px" }} >
-                      <span className="title-text">{Strings.releaseDate}:</span>{" "}
+                      <span className="title-text">{Strings.releaseDate}:</span>
                       {moment(films.release_date)?.format("DD-MM-YYYY")}
                     </li>
                     <Link title={Strings.view}

@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { StarshipList } from "./StarshipTypes";
-import { getIndividualStarshipActions, getStarshipActions } from "./StarshipAsyncThunk";
+import {
+  getIndividualStarshipActions,
+  getStarshipActions,
+} from "./StarshipAsyncThunk";
 import constant from "../../config/constant";
 
-const initialSpecificStarship ={
+const initialSpecificStarship = {
   name: "",
   model: "",
   starship_class: "",
@@ -22,25 +25,25 @@ const initialSpecificStarship ={
   url: "",
   created: "",
   edited: "",
-}
+};
 const initialState: StarshipList = {
   list: [],
   isLoading: false,
   page: constant.page.defaultNumber,
   total: constant.page.defaultTotal,
   limit: constant.page.size,
-  specificStarship: initialSpecificStarship
+  specificStarship: initialSpecificStarship,
 };
 const StarshipSlice = createSlice({
   name: "StarShip",
   initialState,
   reducers: {
     setCurrentPage(state, action) {
-      state.page = action.payload
+      state.page = action.payload;
     },
-    resetSpecificStarship (state) {
-      state.specificStarship = initialSpecificStarship
-    }
+    resetSpecificStarship(state) {
+      state.specificStarship = initialSpecificStarship;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -52,7 +55,7 @@ const StarshipSlice = createSlice({
         (state: StarshipList, { payload }) => {
           if (payload) {
             state.list = payload?.data;
-            state.total = payload?.count
+            state.total = payload?.count;
           } else {
             state.list = [];
           }
@@ -71,7 +74,7 @@ const StarshipSlice = createSlice({
           if (payload) {
             state.specificStarship = payload?.data;
           } else {
-            state.specificStarship = initialSpecificStarship
+            state.specificStarship = initialSpecificStarship;
           }
           state.isLoading = false;
         }

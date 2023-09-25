@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getIndividualPlanet, getPlanet } from "../../service/PlanetService";
-import constant from "../../config/constant";
+import constant from "config/constant";
+import { getIndividualPlanet, getPlanet } from "service/PlanetService";
+
 
 export interface GetPlanetList {
   id?: number;

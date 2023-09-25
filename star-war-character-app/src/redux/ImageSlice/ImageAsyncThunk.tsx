@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import constant from "../../config/constant";
-import { getImage } from "../../service/imageService";
+import constant from "config/constant";
+import { getImage } from "service/imageService";
+
 
 export interface GetImageList{
     id: number

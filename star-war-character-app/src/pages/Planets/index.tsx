@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
-import { IRootState, useAppDispatch } from "../../redux/store";
 import { Fragment, useEffect } from "react";
-import { getPlanetActions } from "../../redux/PlanetsSlice/PlanetAsyncThunk";
-import constant from "../../config/constant";
-import { setTotalPageCount } from "../../service/ApiHelper";
 import { Link } from "react-router-dom";
-import { getImageActions } from "../../redux/ImageSlice/ImageAsyncThunk";
-import { planetAction } from "../../redux/PlanetsSlice/PlanetsSlice";
-import { Loader } from "../../Loader/Loader";
-import Pagination from "../../Components/Pagination/Pagination";
-import { Strings } from "../../resource/Strings";
-import "./Planets.css"
+import "./index.css"
+import { IRootState, useAppDispatch } from "redux/store";
+import { getPlanetActions } from "redux/PlanetsSlice/PlanetAsyncThunk";
+import constant from "config/constant";
+import { getImageActions } from "redux/ImageSlice/ImageAsyncThunk";
+import { setTotalPageCount } from "service/ApiHelper";
+import { planetAction } from "redux/PlanetsSlice/PlanetsSlice";
+import { Loader } from "Loader";
+import { Strings } from "resource/Strings";
+import Pagination from "Components/Pagination";
 
 
 const Planets = () => {
@@ -69,19 +69,19 @@ const Planets = () => {
                         title={Strings.image}
                     />
                     <li style={{ marginBottom: "10px" }}>
-                        <span className="title-text">{Strings.name}:</span>{" "}
+                        <span className="title-text">{Strings.name}:</span>
                         {planet.name}
                     </li>
                     <li style={{ marginBottom: "10px" }}>
-                        <span className="title-text">{Strings.diameter}:</span>{" "}
+                        <span className="title-text">{Strings.diameter}:</span>
                         {planet.diameter}
                     </li>
                     <li style={{ marginBottom: "10px" }}>
-                        <span className="title-text">{Strings.gravity}:</span>{" "}
+                        <span className="title-text">{Strings.gravity}:</span>
                         {planet.gravity}
                     </li>
                     <li style={{ marginBottom: "10px" }}>
-                        <span className="title-text">{Strings.population}:</span>{" "}
+                        <span className="title-text">{Strings.population}:</span>
                         {planet.population}
                     </li>
                     <Link to={`/planet/${splitId?.[1]?.replace("/", "")}`} title={Strings.view}>

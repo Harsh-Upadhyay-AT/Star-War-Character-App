@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
-import { Strings } from "../resource/Strings";
-import "./Layout.css";
+import "./index.css";
+import { Strings } from "resource/Strings";
 
 const Layout = () => {
     return (

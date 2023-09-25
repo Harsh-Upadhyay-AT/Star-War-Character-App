@@ -1,13 +1,12 @@
 import { Link, useParams } from "react-router-dom";
-import { IRootState, useAppDispatch } from "../../../redux/store";
 import { useSelector } from "react-redux";
-import { getIndividualStarshipActions } from "../../../redux/StarshipSlice/StarshipAsyncThunk";
 import { Fragment, useEffect } from "react";
-import './StarShipsDetails.css';
-import { Strings } from "../../../resource/Strings";
+import './index.css';
 import moment from "moment";
-import { Loader } from "../../../Loader/Loader";
-
+import { IRootState, useAppDispatch } from "redux/store";
+import { getIndividualStarshipActions } from "redux/StarshipSlice/StarshipAsyncThunk";
+import { Strings } from "resource/Strings";
+import { Loader } from "Loader";
 
 
 const StarShipsDetails = () => {

@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
-import { IRootState, useAppDispatch } from "../../redux/store";
 import { Fragment, useEffect } from "react";
-import { getSpeciesActions } from "../../redux/SpeciesSlice/SpeciesAsyncThunk";
-import constant from "../../config/constant";
-import { setTotalPageCount } from "../../service/ApiHelper";
 import { Link } from "react-router-dom";
-import { getImageActions } from "../../redux/ImageSlice/ImageAsyncThunk";
-import { speciesAction } from "../../redux/SpeciesSlice/SpeciesSlice";
-import { Loader } from "../../Loader/Loader";
-import Pagination from "../../Components/Pagination/Pagination";
-import { Strings } from "../../resource/Strings";
-import "./Species.css";
+import "./index.css";
+import { IRootState, useAppDispatch } from "redux/store";
+import { setTotalPageCount } from "service/ApiHelper";
+import { getSpeciesActions } from "redux/SpeciesSlice/SpeciesAsyncThunk";
+import constant from "config/constant";
+import { speciesAction } from "redux/SpeciesSlice/SpeciesSlice";
+import { getImageActions } from "redux/ImageSlice/ImageAsyncThunk";
+import { Loader } from "Loader";
+import { Strings } from "resource/Strings";
+import Pagination from "Components/Pagination";
 
 const Species = () => {
   const { list, page, total, limit } = useSelector(

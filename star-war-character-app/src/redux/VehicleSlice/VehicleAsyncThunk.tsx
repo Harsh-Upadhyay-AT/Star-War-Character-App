@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getIndividualVehicle, getVehicle } from "../../service/VehicleService";
-import constant from "../../config/constant";
+import constant from "config/constant";
+import { getIndividualVehicle, getVehicle } from "service/VehicleService";
+
 export interface GetVehicleList {
   id?: number;
   page: number;
@@ -17,8 +18,8 @@ export const getVehicleActions = createAsyncThunk(
       if (response.status === constant.APIResponse.defaultStatusCode) {
         return {
           data: response?.data?.results,
-          count: response?.data?.count
-        }
+          count: response?.data?.count,
+        };
       } else if (response.status === constant.APIResponse.errorStatusCode) {
         return response?.data?.message;
       }
@@ -34,8 +35,8 @@ export const getIndividualVehicleActions = createAsyncThunk(
       const response = await getIndividualVehicle(payload);
       if (response.status === constant.APIResponse.defaultStatusCode) {
         return {
-          data: response?.data
-        }
+          data: response?.data,
+        };
       } else if (response.status === constant.APIResponse.errorStatusCode) {
         return response?.data?.message;
       }

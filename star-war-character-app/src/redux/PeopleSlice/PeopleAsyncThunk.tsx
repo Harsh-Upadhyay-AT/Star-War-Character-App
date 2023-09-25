@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getIndividualPeople, getPeople } from "../../service/PeopleService";
-import constant from "../../config/constant";
+import constant from "config/constant";
+import { getIndividualPeople, getPeople } from "service/PeopleService";
+
 
 export interface GetPeopleList {
   id?: number;

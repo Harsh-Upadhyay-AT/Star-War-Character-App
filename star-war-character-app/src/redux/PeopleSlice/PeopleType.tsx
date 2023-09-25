@@ -1,4 +1,4 @@
-export interface Peoples {
+export interface People {
     url: string;
     id: number;
     name: string;
@@ -15,9 +15,9 @@ export interface Peoples {
     created: string;
     edited: string;
   }
-  export interface PeoplesList {
-    list: Peoples[];
-    specificPerson: Peoples
+  export interface PeopleList {
+    list: People[];
+    specificPerson: People
     isLoading: boolean;
     page: number;
     total: number;

@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { PeoplesList } from "./PeopleType";
+import { PeopleList } from "./PeopleType";
 import { getIndividualPeopleActions, getPeopleActions } from "./PeopleAsyncThunk";
-import constant from "../../config/constant";
+import constant from "config/constant";
+
 
 const initialSpecificPerson = {
     url: "",
@@ -20,7 +21,7 @@ const initialSpecificPerson = {
     films: [],
     species: []
 }
-const initialState: PeoplesList = {
+const initialState: PeopleList = {
   list: [],
   isLoading: false,
   page: constant.page.defaultNumber,
@@ -41,12 +42,12 @@ const PeopleSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(getPeopleActions.pending, (state: PeoplesList) => {
+      .addCase(getPeopleActions.pending, (state: PeopleList) => {
         state.isLoading = true;
       })
       .addCase(
         getPeopleActions.fulfilled,
-        (state: PeoplesList, { payload }) => {
+        (state: PeopleList, { payload }) => {
           if (payload) {
             state.list = payload?.data;
             state.total = payload?.count;
@@ -56,15 +57,15 @@ const PeopleSlice = createSlice({
           state.isLoading = false;
         }
       )
-      .addCase(getPeopleActions.rejected, (state: PeoplesList) => {
+      .addCase(getPeopleActions.rejected, (state: PeopleList) => {
         state.isLoading = false;
       })
-      .addCase(getIndividualPeopleActions.pending, (state: PeoplesList) => {
+      .addCase(getIndividualPeopleActions.pending, (state: PeopleList) => {
         state.isLoading = true;
       })
       .addCase(
         getIndividualPeopleActions.fulfilled,
-        (state: PeoplesList, { payload }) => {
+        (state: PeopleList, { payload }) => {
           if (payload) {
             state.specificPerson = payload?.data;
           } else {
@@ -73,7 +74,7 @@ const PeopleSlice = createSlice({
           state.isLoading = false;
         }
       )
-      .addCase(getIndividualPeopleActions.rejected, (state: PeoplesList) => {
+      .addCase(getIndividualPeopleActions.rejected, (state: PeopleList) => {
         state.isLoading = false;
       });
   },

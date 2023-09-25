@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { VehicleList } from "./Vehicletypes";
-import { getIndividualVehicleActions, getVehicleActions } from "./VehicleAsyncThunk";
+import {
+  getIndividualVehicleActions,
+  getVehicleActions,
+} from "./VehicleAsyncThunk";
 import constant from "../../config/constant";
 
-const initialSpecificVehicle={
+const initialSpecificVehicle = {
   name: "string",
   model: "string",
   vehicle_class: "string",
@@ -20,25 +23,25 @@ const initialSpecificVehicle={
   url: "string",
   created: "string",
   edited: "string",
-}
+};
 const initialState: VehicleList = {
   list: [],
   isLoading: false,
   page: constant.page.defaultNumber,
   total: constant.page.defaultTotal,
   limit: constant.page.size,
-  specificVehicle: initialSpecificVehicle
+  specificVehicle: initialSpecificVehicle,
 };
 const VehicleSlice = createSlice({
   name: "Vehicle",
   initialState,
   reducers: {
     setCurrentPage(state, action) {
-      state.page = action.payload
+      state.page = action.payload;
     },
-    resetSpecificVehicle (state) {
+    resetSpecificVehicle(state) {
       state.specificVehicle = initialSpecificVehicle;
-    }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -50,7 +53,7 @@ const VehicleSlice = createSlice({
         (state: VehicleList, { payload }) => {
           if (payload) {
             state.list = payload?.data;
-            state.total = payload?.count
+            state.total = payload?.count;
           } else {
             state.list = [];
           }

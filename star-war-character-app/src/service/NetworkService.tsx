@@ -18,4 +18,4 @@ const imageApiClient = axios.create({
     ...defaultHeaders,
   },
 });
-export default imageApiClient
+export default imageApiClient;

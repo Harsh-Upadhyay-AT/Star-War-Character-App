@@ -1,16 +1,17 @@
 import { useSelector } from "react-redux";
-import { IRootState, useAppDispatch } from "../../redux/store";
 import { Fragment, useEffect } from "react";
-import { getVehicleActions } from "../../redux/VehicleSlice/VehicleAsyncThunk";
-import constant from "../../config/constant";
-import { getImageActions } from "../../redux/ImageSlice/ImageAsyncThunk";
-import { setTotalPageCount } from "../../service/ApiHelper";
-import { Loader } from "../../Loader/Loader";
 import { Link } from "react-router-dom";
-import Pagination from "../../Components/Pagination/Pagination";
-import "./Vehicle.css";
-import { vehicleAction } from "../../redux/VehicleSlice/VehicleSlice";
-import { Strings } from "../../resource/Strings";
+import "./index.css";
+import { IRootState, useAppDispatch } from "redux/store";
+import { getVehicleActions } from "redux/VehicleSlice/VehicleAsyncThunk";
+import constant from "config/constant";
+import { getImageActions } from "redux/ImageSlice/ImageAsyncThunk";
+import { setTotalPageCount } from "service/ApiHelper";
+import { vehicleAction } from "redux/VehicleSlice/VehicleSlice";
+import { Loader } from "Loader";
+import { Strings } from "resource/Strings";
+import Pagination from "Components/Pagination";
+
 
 const Vehicle = () => {
   const dispatch = useAppDispatch();
@@ -63,12 +64,12 @@ const Vehicle = () => {
                   <div key={id} className="vehicle-card">
                     <img src={image?.download_url} alt={image?.author} />
                     <li style={{ marginBottom: "10px" }}>
-                      <span className="title-text">{Strings.name}:</span>{" "}
+                      <span className="title-text">{Strings.name}:</span>
                       {vehicle.name}
                     </li>
 
                     <li style={{ marginBottom: "10px" }}>
-                      <span className="title-text">{Strings.model}:</span>{" "}
+                      <span className="title-text">{Strings.model}:</span>
                       {vehicle.model}
                     </li>
                     <Link to={`/vehicle/${splitId?.[1]?.replace("/", "")}`} title={Strings.view}>
