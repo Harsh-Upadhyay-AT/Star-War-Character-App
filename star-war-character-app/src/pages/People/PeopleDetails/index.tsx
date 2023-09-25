@@ -52,7 +52,7 @@ const PeopleDetails = () => {
               <span className="title-text">{Strings.gender}:</span> {specificPerson?.gender}
             </li>
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.height}:</span> {specificPerson?.height}
+              <span className="title-text">{Strings.height}:</span> {specificPerson?.height} {Strings.ft}
             </li>
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.mass}:</span> {specificPerson?.mass}

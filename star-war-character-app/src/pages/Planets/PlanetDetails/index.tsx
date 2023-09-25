@@ -41,7 +41,7 @@ const PlanetDetails = () => {
             </li>
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.diameter}:</span>
-              {specificPlanet.diameter}
+              {specificPlanet.diameter}{Strings.mm}
             </li>
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.gravity}:</span>
@@ -53,11 +53,11 @@ const PlanetDetails = () => {
             </li>
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.rotationPeriod}:</span>
-              {specificPlanet.rotation_period}
+              {specificPlanet.rotation_period} {Strings.hour}
             </li>
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.orbitalPeriod}:</span>
-              {specificPlanet.orbital_period}
+              {specificPlanet.orbital_period} {Strings.ms}
             </li>
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.climate}:</span>
@@ -68,8 +68,8 @@ const PlanetDetails = () => {
               {specificPlanet.terrain}
             </li>
             <li style={{ marginBottom: "10px" }}>
-              <span className="title-text">{Strings.surfaceWater}:</span>
-              {specificPlanet.surface_water}
+              <span className="title-text">{Strings.surfaceWater}: </span>
+              {specificPlanet.surface_water} {Strings.percentage}
             </li>
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.created}:</span>

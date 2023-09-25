@@ -50,12 +50,12 @@ const SpeciesDetails = () => {
 
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.averageHeight}:</span>
-              {specificSpecies.average_height}
+              {specificSpecies.average_height} {Strings.cm}
             </li>
 
             <li style={{ marginBottom: "10px" }}>
               <span className="title-text">{Strings.averageLifespan}:</span>
-              {specificSpecies.average_lifespan}
+              {specificSpecies.average_lifespan} {Strings.years}
             </li>
 
             <li style={{ marginBottom: "10px" }}>

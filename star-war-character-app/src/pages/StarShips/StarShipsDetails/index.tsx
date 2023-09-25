@@ -45,15 +45,15 @@ const StarShipsDetails = () => {
       </li>
 
       <li style={{ marginBottom: '10px'}}>
-          <span className="title-text">{Strings.costInCredits}: </span> {specificStarship.cost_in_credits}
+          <span className="title-text">{Strings.costInCredits}: </span> {Strings.rupee} {specificStarship.cost_in_credits}
       </li>
 
       <li style={{ marginBottom: '10px'}}>
-          <span className="title-text">{Strings.length}: </span> {specificStarship.length}
+          <span className="title-text">{Strings.length}: </span> {specificStarship.length} {Strings.ft}
       </li>
 
       <li style={{ marginBottom: '10px'}}>
-          <span className="title-text">{Strings.crew}: </span> {specificStarship.crew}
+          <span className="title-text">{Strings.crew}: </span> {specificStarship.crew} {Strings.unit}
       </li>
 
       <li style={{ marginBottom: '10px'}}>
@@ -61,15 +61,15 @@ const StarShipsDetails = () => {
       </li>
 
       <li style={{ marginBottom: '10px'}}>
-          <span className="title-text">{Strings.maxAtmosphereSpeed}: </span> {specificStarship.max_atmosphering_speed}
+          <span className="title-text">{Strings.maxAtmosphereSpeed}: </span> {specificStarship.max_atmosphering_speed} {Strings.km}
       </li>
 
       <li style={{ marginBottom: '10px'}}>
-          <span className="title-text">{Strings.mglt}: </span> {specificStarship.MGLT}
+          <span className="title-text">{Strings.mglt}: </span> {specificStarship.MGLT} {Strings.hour}
       </li>
 
       <li style={{ marginBottom: '10px'}}>
-          <span className="title-text">{Strings.cargoCapacity}: </span> {specificStarship.cargo_capacity}
+          <span className="title-text">{Strings.cargoCapacity}: </span> {specificStarship.cargo_capacity} {Strings.kilograms}
       </li>
 
       <li style={{ marginBottom: '10px'}}>
@@ -77,7 +77,7 @@ const StarShipsDetails = () => {
       </li>
 
       <li style={{ marginBottom: '10px'}}>
-          <span className="title-text">{Strings.hyperDriveRating}: </span> {specificStarship.hyperdrive_rating}
+          <span className="title-text">{Strings.hyperDriveRating}: </span> {specificStarship.hyperdrive_rating} {Strings.hour}
       </li>
 
 
